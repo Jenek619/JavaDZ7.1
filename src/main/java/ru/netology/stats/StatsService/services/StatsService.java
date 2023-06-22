@@ -2,70 +2,70 @@ package ru.netology.stats.StatsService.services;
 
 public class StatsService {
 
-    public int AllSales(long[] sales) {
-        int AllMonth = 0;
+    public int allsales(long[] sales) {
+        int allmonth = 0;
         for (long sale : sales) {
-            AllMonth += sale;
+            allmonth += sale;
         }
-        return AllMonth;
+        return allmonth;
     }
 
-    public int MidSales(long[] sales) {
-        int AllSumSales = 0;
-        int MidSumMonth = 0;
+    public int midsales(long[] sales) {
+        int allsumsales = 0;
+        int midsummonth = 0;
 
-        MidSumMonth = AllSales(sales);
-        AllSumSales = MidSumMonth / sales.length;
+        midsummonth = allsales(sales);
+        allsumsales = midsummonth / sales.length;
 
-        return AllSumSales;
+        return allsumsales;
     }
 
-    public int MaxSales(long[] sales) {
-        int MaxMonthSales = 0;
+    public int maxsales(long[] sales) {
+        int maxmonthsales = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] >= sales[MaxMonthSales]) {
-                MaxMonthSales = i;
+            if (sales[i] >= sales[maxmonthsales]) {
+                maxmonthsales = i;
             }
         }
 
-        return MaxMonthSales + 1;
+        return maxmonthsales + 1;
     }
 
-    public int MinSales(long[] sales) {
-        int MinMonthSales = 0;
+    public int minsales(long[] sales) {
+        int minmonthsales = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] <= sales[MinMonthSales]) {
-                MinMonthSales = i;
+            if (sales[i] <= sales[minmonthsales]) {
+                minmonthsales = i;
             }
         }
 
-        return MinMonthSales + 1;
+        return minmonthsales + 1;
     }
 
-    public int UnderMidSales(long[] sales) {
-        int MidSum = MidSales(sales);
-        int UnderMidSum = 0;
+    public int undermidsales(long[] sales) {
+        int midsum = midsales(sales);
+        int undermidsum = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < MidSum) {
-                UnderMidSum = UnderMidSum + 1;
+            if (sales[i] < midsum) {
+                undermidsum = undermidsum + 1;
             }
         }
-        return UnderMidSum;
+        return undermidsum;
     }
 
-    public int MaxMidSales(long[] sales) {
-        int MidSum = MidSales(sales);
-        int MaxMidSum = 0;
+    public int maxmidsales(long[] sales) {
+        int midsum = midsales(sales);
+        int maxmidsum = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > MidSum) {
-                MaxMidSum = MaxMidSum + 1;
+            if (sales[i] > midsum) {
+                maxmidsum = maxmidsum + 1;
             }
         }
-        return MaxMidSum;
+        return maxmidsum;
     }
 
 

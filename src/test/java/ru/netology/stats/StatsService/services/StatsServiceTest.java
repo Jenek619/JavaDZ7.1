@@ -12,7 +12,7 @@ public class StatsServiceTest {
         long[] AllSales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 180;
-        long actual = service.AllSales(AllSales);
+        long actual = service.allsales(AllSales);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -22,10 +22,10 @@ public class StatsServiceTest {
     public void shouldMidSalesMonth() {
         StatsService service = new StatsService();
 
-        long[] MidSales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] midsales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 15;
-        int actual = service.MidSales(MidSales);
+        int actual = service.midsales(midsales);
 
         Assertions.assertEquals(expected, actual);
 
@@ -36,10 +36,10 @@ public class StatsServiceTest {
     public void shouldMaxSalesMonth() {
         StatsService service = new StatsService();
 
-        long[] MaxSales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] maxsales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 8;
-        int actual = service.MaxSales(MaxSales);
+        int actual = service.maxsales(maxsales);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -48,10 +48,10 @@ public class StatsServiceTest {
     public void shouldMinSalesMonth() {
         StatsService service = new StatsService();
 
-        long[] MinSales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] minsales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 9;
-        int actual = service.MinSales(MinSales);
+        int actual = service.minsales(minsales);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -60,10 +60,10 @@ public class StatsServiceTest {
     public void shouldUnderMidSales() {
         StatsService service = new StatsService();
 
-        long[] UnderMidSum = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] undermidsum = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 5;
-        int actual = service.UnderMidSales(UnderMidSum);
+        int actual = service.undermidsales(undermidsum);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -72,10 +72,10 @@ public class StatsServiceTest {
     public void shouldMaxMidSales() {
         StatsService service = new StatsService();
 
-        long[] MaxMidSum = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] maxmidsum = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 5;
-        int actual = service.MaxMidSales(MaxMidSum);
+        int actual = service.maxmidsales(maxmidsum);
 
         Assertions.assertEquals(expected, actual);
 
